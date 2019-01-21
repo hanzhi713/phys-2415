@@ -1,0 +1,37 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 1.1}
+\subsubsection*{a)}
+\begin{align*}
+    \sigma = \frac{Q}{\pi R^2}
+\end{align*}
+\subsubsection*{b)}
+\begin{align*}
+    dq = \sigma 2\pi r' dr' =  \frac{2Q r' dr'}{R^2}
+\end{align*}
+\subsubsection*{c)}
+\begin{align*}
+    dE = \frac{1}{4 \pi \epsilon} d\frac{dQ}{(d^2 + r^2)^\frac{3}{2}} = \frac{1}{4 R^2 \pi \epsilon} d\frac{2Q r dr}{(d^2 + r^2)^\frac{3}{2}} = \frac{d}{2 R^2 \pi \epsilon} \frac{Q r dr}{(d^2 + r^2)^\frac{3}{2}}
+\end{align*}
+\subsubsection*{d)}
+\begin{align*}
+    E & = \int_{0}^{R} \frac{d}{2 R^2 \pi \epsilon} \frac{Q r}{(d^2 + r^2)^\frac{3}{2}} dr \\
+      & = \frac{Qd}{2 R^2 \pi \epsilon}\int_{0}^{R} \frac{r}{(d^2 + r^2)^\frac{3}{2}} dr
+\end{align*}
+\subsubsection*{e)}
+\begin{align*}
+    E & = \frac{Qd}{2 R^2 \pi \epsilon} \left[
+        - \frac{1}{\sqrt{d^2 + r^2}}
+        \right]^R_0                            \\
+      & = \frac{Q}{2 \pi R^2 \epsilon} \left(
+    1 - \frac{d}{\sqrt{d^2 + R^2}}
+    \right)
+\end{align*}
+\end{document}

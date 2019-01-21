@@ -1,0 +1,31 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 1.2}
+\subsubsection*{a)}
+\begin{align*}
+    Q & = \int dQ                                         \\
+      & = \int \lambda(\theta) dl                         \\
+      & = \int_{0}^{\pi} \lambda_0 \cos{\theta} R d\theta \\
+      & = 0
+\end{align*}
+\subsubsection*{b)}
+\begin{align*}
+    dE_x    & = \frac{1}{4 \pi \epsilon_0} \frac{dQ}{R^2} \cos{\theta}                               \\
+            & = \frac{1}{4 \pi \epsilon_0} \frac{\lambda_0 \cos{\theta} R d\theta}{R^2} \cos{\theta} \\
+            & = \frac{\lambda_0 }{4 \pi \epsilon_0 R} \cos^2{\theta} d\theta                         \\
+    dE_y    & = \frac{\lambda_0 }{4 \pi \epsilon_0 R} \cos{\theta} \sin{\theta} d\theta              \\
+    \vec{E} & = \frac{\lambda_0 }{4 \pi \epsilon_0 R} \left(
+    \int_{0}^{\pi} \cos^2{\theta} d\theta \hat{i} + \int_{0}^{\pi} \cos{\theta}\sin{\theta} d\theta \hat{j}
+    \right)                                                                                          \\
+            & = \frac{\lambda_0 }{4 \pi \epsilon_0 R} \left(\frac{\pi}{2}\hat{i} + 0\hat{j}\right)   \\
+            & = \frac{\lambda_0 }{8 \epsilon_0 R}\hat{i}                                             \\
+\end{align*}
+
+\end{document}

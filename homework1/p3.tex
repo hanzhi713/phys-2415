@@ -1,0 +1,69 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 1.3}
+\subsubsection*{a)}
+\setlength{\leftskip}{1cm}
+\paragraph*{i)}
+Downward if $z_0 > \frac{h}{2}$ since there're more charges at the bottom, upward if $z_0 < \frac{h}{2}$ since there're more charges at the top
+\paragraph*{ii)}
+When $z_0 = \frac{h}{2}$. This point is the center of the cylindrical shell, and the electrical forces should be zero by symmetry.
+\paragraph*{iii)}
+When $z_0 >>h$, the cylindrical shell is a ring with radius $R$. Therefore,
+\begin{equation*}
+    \hspace*{1cm} E = \frac{1}{4\pi \epsilon_0} \frac{Qz_0}{(z_0^2 + R^2)^\frac{3}{2}} = \frac{1}{4\pi \epsilon_0} \frac{\sigma 2 \pi R h z_0}{(z_0^2 + R^2)^\frac{3}{2}} = \frac{\sigma R h}{2 \epsilon_0} \frac{z_0}{(z_0^2 + R^2)^\frac{3}{2}}
+\end{equation*}
+\setlength{\leftskip}{0cm}
+\subsubsection*{b)}
+\begin{equation*}
+    dQ = \sigma 2\pi R dz
+\end{equation*}
+\subsubsection*{c)}
+\begin{equation*}
+    d = |{z_0 - z}|
+\end{equation*}
+\subsubsection*{d)}
+\begin{equation*}
+    dE = \frac{1}{4\pi \epsilon_0} \frac{d(dQ)}{(d^2 + R^2)^\frac{3}{2}} = \frac{1}{4\pi \epsilon_0} \frac{(z_0 - z)\sigma 2 \pi R}{((z_0-z)^2 + R^2)^\frac{3}{2}} dz = \frac{\sigma R}{2\epsilon_0} \frac{z_0 - z}{((z_0-z)^2 + R^2)^\frac{3}{2}} dz
+\end{equation*}
+\subsubsection*{e)}
+\begin{equation*}
+    E = \frac{\sigma R}{2\epsilon_0} \int_{0}^{h} \frac{z_0 - z}{((z_0-z)^2 + R^2)^\frac{3}{2}} dz
+\end{equation*}
+\subsubsection*{f)}
+\begin{equation*}
+    E = \frac{\sigma R}{2\epsilon_0} \left(
+    \frac{1}{\sqrt{R^2 + (z_0 - h)^2}} - \frac{1}{\sqrt{R^2 + z_0^2}}
+    \right)
+\end{equation*}
+\subsubsection*{g)}
+\begin{align*}
+    E & = \frac{\sigma R}{2\epsilon_0} \left[
+        \left(
+        \frac{1}{\sqrt{R^2 + h^2}} + \frac{h}{(R^2 + h^2)^\frac{3}{2}}z_0
+        \right)
+        - \frac{1}{\sqrt{R^2 + z_0^2}}
+        \right]                               \\
+\end{align*}
+% Using the substitution $y = x \tan{\theta}$, $dy = x \sec^2{\theta} d\theta$
+% \begin{align*}
+%     \int \frac{dy}{(x^2 + y^2)^\frac{3}{2}} &= 
+%     \int \frac{x \sec^2{\theta}}{(x^2 + x^2 \tan^2{\theta})^\frac{3}{2}} d\theta \\
+%     &= \int \frac{x \sec^2{\theta}}{(x^2 \sec^2{\theta})^\frac{3}{2}} d\theta \\
+%     &= \frac{1}{x^2} \int \cos{\theta} d\theta \\
+%     &= \frac{1}{x^2} \sin{\theta} + C
+% \end{align*}
+% Since $y = x \tan{\theta}$, $\theta = \arctan{\frac{y}{x}}$
+% \begin{align*}
+%     \frac{1}{x^2} \sin{\theta} = \frac{1}{x^2} \sin{\arctan{\frac{y}{x}}} = \frac{y}{x^2 \sqrt{x^2 + y^2}}
+% \end{align*}
+% The fact that $\sin{\arctan{\frac{y}{x}}} = \frac{y}{\sqrt{x^2 + y^2}} $ comes from simple geometry. You draw a right-angled triangle with adjacent and opposite equal to $x$ and $y$ and you'll see.
+
+
+\end{document}

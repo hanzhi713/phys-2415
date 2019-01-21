@@ -1,0 +1,41 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 0.2}
+\subsubsection*{a)}
+\begin{align*}
+    a(t) & = v_0 \frac{d}{dt} \left(e^{-\gamma t} \sin{\omega t}  \right)                   \\
+         & = v_0 \left( -e^{-\gamma t}\sin{\omega t} + e^{-\gamma t} \cos{\omega t} \right)
+\end{align*}
+\subsubsection*{b)}
+\begin{align*}
+    y(t) & = v_0 \int_{}^{} e^{-\gamma t} \sin{\omega t}~dt                                                                       \\
+         & = -v_0 \frac{1}{\gamma} \left(e^{-\gamma t} \sin{\omega t} - \omega \int_{}^{} e^{-\gamma t} \cos{\omega t}~dt \right) \\
+         & = -v_0 \frac{1}{\gamma} \left(e^{-\gamma t} \sin{\omega t} + \omega \frac{1}{\gamma} \left(
+    e^{-\gamma t} \cos{\omega t} - \omega \int_{}^{} e^{-\gamma t} (-\sin{\omega t})~dt
+    \right) \right)                                                                                                               \\
+         & = -\frac{v_0}{\gamma} \left(e^{-\gamma t} \sin{\omega t}
+    + \frac{\omega}{\gamma} e^{-\gamma t} \cos{\omega t} + \frac{\omega^2}{\gamma} \int_{}^{} e^{-\gamma t} (\sin{\omega t})~dt
+    \right)
+\end{align*}
+It can be observed that the integral $\int_{}^{} e^{-\gamma t} \sin{\omega t}~dt$ appears at the both side of the equations. We can rearrange the terms to solve for it
+\begin{align*}
+    v_0 \int_{}^{} e^{-\gamma t} \sin{\omega t}~dt + v_0 \frac{\omega^2}{\gamma^2} \int_{}^{} e^{-\gamma t} (\sin{\omega t})~dt & =
+    -\frac{v_0}{\gamma} e^{-\gamma t} \left(\sin{\omega t} + \frac{\omega}{\gamma}\cos{\omega t} \right)                            \\
+    v_0 \left(1 + \frac{\omega^2}{\gamma^2}\right) \int_{}^{} e^{-\gamma t} \sin{\omega t}~dt                                   & =
+    -\frac{v_0}{\gamma} e^{-\gamma t} \left(\sin{\omega t} + \frac{\omega}{\gamma}\cos{\omega t} \right)
+\end{align*}
+Therefore,
+\begin{align*}
+    y(t) & = v_0 \int_{}^{} e^{-\gamma t} \sin{\omega t}~dt                                                                                                 \\
+         & = -\frac{v_0}{\gamma\left(1 + \frac{\omega^2}{\gamma^2}\right)} e^{-\gamma t} \left(\sin{\omega t} + \frac{\omega}{\gamma}\cos{\omega t} \right) \\
+         & = -\frac{v_0 \gamma}{\omega^2 + \gamma^2} e^{-\gamma t} \left(\sin{\omega t} + \frac{\omega}{\gamma}\cos{\omega t} \right)                       \\
+         & = -\frac{v_0}{\omega^2 + \gamma^2} e^{-\gamma t} \left(\gamma \sin{\omega t} + \omega \cos{\omega t} \right)
+\end{align*}
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{geometry, setspace}
+\geometry{a4paper, portrait, margin=1in}
+\usepackage[fleqn]{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{subfiles}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\graphicspath{{homework0/}{../homework0/}}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\title{Physics 2415 Homework}
+\author{Hanzhi Zhou}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+\setcounter{section}{-1}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\pagenumbering{arabic}
+
+\doublespacing
+\tableofcontents
+% \listoffigures
+\newpage
+\singlespacing
+
+\section{Homework 0}
+\subfile{homework0/p1}
+\subfile{homework0/p2}
+\section{Homework 1}
+\subfile{homework1/p1}
+\subfile{homework1/p2}
+\subfile{homework1/p3}
+\end{document}
