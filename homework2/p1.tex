@@ -1,0 +1,41 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+
+\subsection{Problem 2.1}
+\subsubsection*{a)}
+\begin{align*}
+    E_r = \frac{1}{4 \pi \epsilon_0} \frac{Q}{d^2} = \frac{1}{4 \pi \epsilon_0} \frac{Q}{z_0^2 + r^2}
+\end{align*}
+\subsubsection*{b)}
+\begin{align*}
+    E_{\bot} = E_r \frac{z_0}{\sqrt{z_0^2 + r^2}} = \frac{1}{4 \pi \epsilon_0} \frac{Qz_0}{(z_0^2 + r^2)^\frac{3}{2}}
+\end{align*}
+\subsubsection*{c)}
+\begin{align*}
+    d\Phi = E_\bot dA = \frac{1}{4 \pi \epsilon_0} \frac{Qz_0}{(z_0^2 + r^2)^\frac{3}{2}} 2 \pi r dr
+    = \frac{1}{2 \epsilon_0} \frac{Qz_0}{(z_0^2 + r^2)^\frac{3}{2}} r dr
+\end{align*}
+\subsubsection*{d)}
+\begin{align*}
+    \Phi &= \int d\Phi \\
+         &= \int_{0}^{r_0} \frac{1}{2 \epsilon_0} \frac{Qz_0}{(z_0^2 + r^2)^\frac{3}{2}} r dr \\
+         &= \frac{Qz_0}{2 \epsilon_0} \int_{0}^{r_0} \frac{r}{(z_0^2 + r^2)^\frac{3}{2}}dr \\
+         &= \frac{Qz_0}{2 \epsilon_0} \left(
+             \frac{1}{z_0} - \frac{1}{\sqrt{r_0^2 + z_0^2}}
+         \right) \\
+         &= \frac{Q}{2 \epsilon_0} \left(
+            1 - \frac{z_0}{\sqrt{r_0^2 + z_0^2}}
+        \right)
+\end{align*}
+\subsubsection*{e)}
+\begin{align*}
+    \Phi = \frac{Q}{2\epsilon_0} (1 - \cos{\theta_0})
+\end{align*}
+\end{document}
