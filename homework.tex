@@ -8,6 +8,13 @@
 \usepackage{setspace}
 \usepackage{subfiles}
 \usepackage{fancyhdr}
+\usepackage{changepage}
+
+\usepackage[explicit]{titlesec}
+\titleformat{\paragraph}[runin]
+  {\normalfont\normalsize\bfseries}{}{15pt}{{\theparagraph\hspace*{0.6cm}#1}}
+\titleformat{name=\paragraph,numberless}[runin]
+  {\normalfont\normalsize\bfseries}{}{15pt}{{\hspace*{0.6cm}#1}}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -31,6 +38,8 @@
 \makeatother
 
 \setcounter{section}{-1}
+
+\newenvironment{subp}{\begin{adjustwidth}{1cm}{}\mbox{}}{\end{adjustwidth}}
 
 \begin{document}
 \maketitle
