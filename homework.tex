@@ -9,6 +9,8 @@
 \usepackage{subfiles}
 \usepackage{fancyhdr}
 \usepackage{changepage}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \usepackage[explicit]{titlesec}
 \titleformat{\paragraph}[runin]
@@ -22,7 +24,7 @@
 \lhead{Physics 2415 Homework}
 \cfoot{\thepage}
 
-\graphicspath{{homework0/}{../homework0/}}
+\graphicspath{{homework0/}{../homework0/}{homework2/}{../homework2/}}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -42,8 +44,33 @@
 \newenvironment{subp}{\begin{adjustwidth}{1cm}{}\mbox{}}{\end{adjustwidth}}
 
 \begin{document}
-\maketitle
-\thispagestyle{empty}
+% --------- title page -------------
+\begin{titlepage}
+  \begin{center}
+      \vspace*{1cm}
+
+      \Huge\textbf{Physics 2415 Homework}
+
+      % \vspace{0.5cm}
+      % \LARGE ECE 2630
+ 
+      \vspace{1.5cm}
+
+      \textbf{Hanzhi Zhou}
+
+      \vfill
+      \vspace{0.8cm}
+
+      \Large
+      School of Engineering and Applied Science\\
+      \vspace{0.2cm}
+      University of Virginia\\
+      \vspace{0.2cm}
+      \today
+  \end{center}
+  \clearpage
+\end{titlepage}
+% ----------------------------------
 \pagenumbering{arabic}
 
 \doublespacing
@@ -55,10 +82,17 @@
 \section{Homework 0}
 \subfile{homework0/p1}
 \subfile{homework0/p2}
+
+\newpage
+
 \section{Homework 1}
 \subfile{homework1/p1}
 \subfile{homework1/p2}
 \subfile{homework1/p3}
+
+\newpage
+
+\section{Homework 2}
 \subfile{homework2/p1}
 \subfile{homework2/p2}
 \subfile{homework2/p3}

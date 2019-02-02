@@ -1,0 +1,55 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 2.3}
+\subsubsection*{a)}
+\begin{equation*}
+    dV = \frac{dQ}{4 \pi \epsilon_0} \frac{1}{r} = \frac{\lambda dz}{4 \pi \epsilon_0} \frac{1}{\sqrt{x^2 + z^2}}
+\end{equation*}
+
+\subsubsection*{b)}
+\begin{align*}
+    V(x) & = \int dV                                                                                          \\
+         & = \int_{-\frac{L}{2}}^{\frac{L}{2}} \frac{\lambda}{4 \pi \epsilon_0} \frac{1}{\sqrt{x^2 + z^2}} dz \\
+         & = \frac{\lambda}{2 \pi \epsilon_0} \ln \left(
+    \frac{\sqrt{4x^2+L^2} + L}{2|x|}
+    \right)
+\end{align*}
+
+\subsubsection*{c)}
+\begin{align*}
+    dV   & = \frac{\lambda dz}{4 \pi \epsilon_0} \frac{1}{z - z'}                                    \\
+    V(z) & = \frac{\lambda}{4 \pi \epsilon_0} \int_{-\frac{L}{2}}^{\frac{L}{2}} \frac{1}{z - z'} dz' \\
+         & = -\frac{\lambda}{4 \pi \epsilon_0} \ln \left|
+    \frac{2z-L}{2z+L}
+    \right|
+\end{align*}
+
+\subsubsection*{d)}
+\begin{equation*}
+    W_{P} = q_e V_x(0.25) = -1.60 \times 10^{-19}C \times 53691.5V = 8.591 \times 10^{-15}J
+\end{equation*}
+
+\subsubsection*{e)}
+\begin{equation*}
+    V_z(0.75) = 28943.5V < V_x(0.25).
+    % W_{Q} = q_e V_z(0.75) = - -1.60 \times 10^{-19} \frac{-2\times 10^{-6}}{4 \pi \epsilon_0} \ln \left|
+    %     \frac{1.5-1}{1.5+1}
+    % \right| = 4.631 \times 10^{-15}J
+\end{equation*}
+
+Therefore, point P has a higher potential.
+
+\subsubsection*{f)}
+\begin{equation*}
+    W = q_e \Delta V = -1.60\times 10^{-19}C (53691.5V - 28943.5V) = -24748~eV
+\end{equation*}
+
+Therefore, the potential energy of the electron decreases by $24748~eV$
+\end{document}
