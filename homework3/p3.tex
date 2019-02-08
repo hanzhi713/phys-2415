@@ -1,0 +1,47 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 3.3}
+\subsubsection*{a)}
+% Voltage in any close path is zero
+\begin{align*}
+    V_r + V_C - \varepsilon = 0 \\
+    rI_r + \frac{Q}{C} - \varepsilon = 0 \\
+    I_r = \frac{\varepsilon}{r} - \frac{Q}{Cr}
+\end{align*}
+\subsubsection*{b)}
+\begin{align*}
+    -V_C + V_R = 0 \\
+    -\frac{Q}{C} + RI_R = 0 \\
+    I_R = \frac{Q}{CR} 
+\end{align*}
+\subsubsection*{c)}
+\begin{equation*}
+    I_r - I_R = \frac{dQ}{dt}
+\end{equation*}
+\subsubsection*{d)}
+\begin{align*}
+    &\frac{dQ}{dt} = \frac{\varepsilon}{r} - Q \left(\frac{1}{CR} + \frac{1}{Cr}\right) \\
+    &\frac{dQ}{dt} + \left(\frac{1}{CR} + \frac{1}{Cr}\right)Q = \frac{\varepsilon}{r}  
+\end{align*}
+\begin{equation*}
+    a = \frac{1}{C} \left(\frac{1}{R} + \frac{1}{r}\right) = \frac{1}{C} \left(\frac{R+r}{Rr}\right),\ b = \frac{\varepsilon}{r}
+\end{equation*}
+
+\subsubsection*{e)}
+\begin{equation*}
+    Q(t) = C \varepsilon \frac{R}{R + r} + Ae^{-\frac{1}{C} \left(\frac{R + r}{Rr}\right)t} 
+\end{equation*}
+
+\subsubsection*{f)}
+\begin{align*}
+    Q(0) &= C \varepsilon \frac{R}{R + r} + A \\
+    A &= -C \varepsilon \frac{R}{R + r}
+\end{align*}
+\end{document}
