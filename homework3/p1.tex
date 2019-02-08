@@ -1,0 +1,29 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 3.1}
+\subsubsection*{a)}
+\begin{align*}
+    V_{load} &= \varepsilon\frac{R_{load}}{R_{load} + r} \\
+    P_{load} &= \frac{V_{load}^2}{R_{load}} = \varepsilon^2 \frac{R_{load}}{(R_{load} + r)^2}
+\end{align*}
+\subsubsection*{b)}
+\begin{align*}
+    &\frac{d}{dR}\left(\frac{R}{(R+r)^2}\right) = \frac{r-R}{(R+r)^3} = 0 \\
+    &R = r
+\end{align*}
+
+Therefore the power will be largest when $R_{load} = r$
+\subsubsection*{c)}
+\begin{equation*}
+    P_{total} = I^2 r + I^2 R = 2I^2r
+\end{equation*}
+
+Therefore 50\% of the power is dissipated by the battery 
+\end{document}

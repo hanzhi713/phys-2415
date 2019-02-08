@@ -1,0 +1,60 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 3.2}
+\subsubsection*{a)}
+\begin{equation*}
+    C = K \varepsilon_0 \frac{A}{d}
+\end{equation*}
+\subsubsection*{b)}
+\begin{equation*}
+    r = \rho \frac{d}{A}
+\end{equation*}
+
+\subsubsection*{c)}
+\begin{align*}
+    V(t) &= \frac{Q(t)}{C} \\
+    I(t) &= -\frac{dQ}{dt} = -\frac{V(t)}{r} = -\frac{Q(t)}{Cr}
+    %  = -\frac{Q(t)}{K \varepsilon_0 \frac{A}{d} \rho \frac{d}{A}} = -\frac{Q(t)}{K \varepsilon_0 \rho}
+\end{align*}
+
+Solve the separable differential equation:
+\begin{align*}
+    \int \frac{1}{Q} dQ &= \int \frac{1}{Cr} dt \\
+    \ln{|Q|} &= -\frac{t}{Cr} + D \\
+    Q &= D e^{\frac{-t}{Cr}}
+\end{align*}
+
+Given the initial value $Q(0) = Q_0$, $D = Q_0$. 
+\begin{align*}
+    \frac{1}{4}Q_0 &= Q_0 e^{\frac{-t}{Cr}} \\
+    \ln{\frac{1}{4}} &= \frac{-t}{Cr} \\
+    t &= Cr\ln{4}
+\end{align*}
+
+Therefore $Cr\ln{4}$ amount of time is required for the charge to decrease from $Q_0$ to $\frac{1}{4}Q_0$
+
+\subsubsection*{d)}
+\begin{align*}
+    dE &= I(t)^2~r~dt = \left(\frac{dQ}{dt}\right)^2~r~dt \\
+     &= \left(-\frac{Q_0}{Cr} e^{\frac{-t}{Cr}}\right)^2~r~dt \\
+     &= \frac{Q_0^2}{C^2 r} e^{\frac{-2t}{Cr}}~dt
+\end{align*}
+
+\subsubsection*{e)}
+\begin{align*}
+    E &= \frac{Q_0^2}{C^2 r} \int_{0}^{\infty} e^{\frac{-2t}{Cr}} dt \\
+    &= \frac{Q_0^2}{C^2 r} \frac{C}{2r} \left(1 - e^{-\infty} \right) \\
+    &= \frac{1}{2} \frac{Q_0^2}{C}
+\end{align*}
+
+\subsubsection*{f)}
+\indent \indent
+The energy stored in a capacitor is $\frac{1}{2}\frac{Q_0^2}{C}$ when it is fully charged to $Q_0$. It is the same as the total energy dissipated through the resistor calculated in \bf{e)}.
+\end{document}
