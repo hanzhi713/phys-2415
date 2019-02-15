@@ -1,0 +1,184 @@
+\documentclass[12pt,landscape]{article}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[a4paper, landscape]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amsthm,amsfonts,amssymb}
+\usepackage{color,graphicx,overpic}
+\usepackage{hyperref}
+
+\pdfinfo{
+  /Title (sheet.pdf)
+  /Creator (TeX)
+  /Producer (pdfTeX 1.40.0)
+  /Author (Hanzhi Zhou)
+  /Subject (Formula Sheet)
+  /Keywords (pdflatex, latex, pdftex, tex)}
+
+% This sets page margins to .5 inch if using letter paper, and to 1cm
+% if using A4 paper. (This probably isn't strictly necessary.)
+% If using another size paper, use default 1cm margins.
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+    { \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+    {\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+        {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+        {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+    }
+
+% Turn off header and footer
+\pagestyle{empty}
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+% Define BibTeX command
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+%My Environments
+\newtheorem{example}[section]{Example}
+% -----------------------------------------------------------------------
+
+\begin{document}
+\raggedright
+\footnotesize
+\begin{multicols}{3}
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+\setlength{\mathindent}{0pt}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+\begin{center}
+     \Large{\underline{PHYS 2415 Formula Sheet}} \\
+\end{center}
+
+\section{E Field \& Potential}
+\begin{equation*}
+    \Delta V = V_B - V_A = \frac{\Delta U}{q} = -\int_{A}^{B} \vec{E} \cdot d\vec{l}
+\end{equation*}
+\begin{equation*}
+    \Delta U = U_b - U_a = q(V_b - V_a)
+\end{equation*}
+\begin{equation*}
+    V = k\frac{Q}{r} = k \int \frac{dq}{r}
+\end{equation*}
+\begin{equation*}
+    \vec{E} = - \vec{\nabla} V 
+\end{equation*}
+\begin{equation*}
+    \vec{F} = q\vec{E}
+\end{equation*}
+\begin{equation*}
+    U_{\text{system}} = k \sum_{\text{pairs i j}} \frac{q_i q_j}{r_{ij}}
+\end{equation*}
+\begin{equation*}
+    E_{\text{rod}} = k \frac{\lambda L}{x \sqrt{x^2 + L^2 / 4}} = \frac{\lambda}{2\pi \epsilon_0 x }
+\end{equation*}
+\begin{equation*}
+    E_{\text{ring}} = k \frac{Qx}{(x^2+R^2)^\frac{3}{2}}
+\end{equation*}
+\begin{equation*}
+    E_{\text{nonconducting disk plate}} = \frac{\sigma}{2\epsilon_0} \left[1 - \frac{z}{\sqrt{z^2 + R^2}}\right] \approx \frac{\sigma}{2\epsilon_0}
+\end{equation*}
+\begin{equation*}
+    E_{\text{conducting plane}} = \frac{\sigma}{\epsilon_0}
+\end{equation*}
+\begin{equation*}
+    \text{dipole moment } p = Ql
+\end{equation*}
+\begin{equation*}
+    \tau = \vec{p} \times \vec{E} = p E \sin{\theta}
+\end{equation*}
+\begin{equation*}
+    W = \int_{\theta_1}^{\theta_2} \tau d\theta = -pE \int_{\theta_1}^{\theta_2} \sin{\theta} d\theta = p E (\cos{\theta_2} - \cos{\theta_1})
+\end{equation*}
+
+\section{Capacitance \& DC Circuit}
+\begin{equation*}
+    C_{\text{pplate}} = K \epsilon_0 \frac{A}{d}
+\end{equation*}
+\begin{equation*}
+    W = U = \frac{1}{C} \int_{0}^{Q} q dq = \frac{1}{2}\frac{Q^2}{C} = \frac{1}{2} CV^2 = \frac{1}{2}QV
+\end{equation*}
+\begin{equation*}
+    R = \rho \frac{l}{A}
+\end{equation*}
+\begin{equation*}
+    \rho = \rho_0 [1 + \alpha(T - T_0)]
+\end{equation*}
+\begin{equation*}
+    V = V_0 \sin{2\pi f} t = V_0 \sin{\omega t}
+\end{equation*}
+\begin{equation*}
+    I_0 \sin{\omega t}
+\end{equation*}
+\begin{equation*}
+    \overbar{P} = \frac{1}{2} I_0^2 R = \frac{1}{2} \frac{V_0^2}{R}= I_{\text{rms}} V_{\text{rms}}
+\end{equation*}
+\begin{equation*}
+    \overbar{I^2} = \frac{1}{2} I_0^2
+\end{equation*}
+\begin{equation*}
+    \overbar{V}^2 = \frac{1}{2} V_0^2
+\end{equation*}
+\begin{equation*}
+    I_{\text{rms}} = \sqrt{\overbar{I^2}} = \frac{I_0}{\sqrt{2}}
+\end{equation*}
+\begin{equation*}
+    V_{\text{rms}} = \sqrt{\overbar{V^2}} = \frac{V_0}{\sqrt{2}}
+\end{equation*}
+\begin{equation*}
+    j = \frac{I}{A} = -n e \vec{v}_d 
+\end{equation*}
+\begin{equation*}
+    n = \frac{N}{V}
+\end{equation*}
+\begin{equation*}
+    \varepsilon = IR + \frac{Q}{C}
+\end{equation*}
+\begin{equation*}
+    Q = C\varepsilon \left(1 - e^{\frac{-t}{RC}} \right)
+\end{equation*}
+\begin{equation*}
+    Q = Q_0 e^{\frac{-t}{RC}}
+\end{equation*}
+
+% \subsection{xCode}
+% Subsetction text
+
+% \section{Section 3}
+
+% You can even have references
+\rule{0.3\linewidth}{0.25pt}
+\scriptsize
+\bibliographystyle{abstract}
+\bibliography{refFile}
+\end{multicols}
+\end{document}
