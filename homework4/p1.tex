@@ -1,0 +1,76 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 4.1}
+\subsubsection*{a)}
+\begin{align*}
+    F &= \int I d\vec{l} \times \vec{B} \\
+      &= \int_{-\infty}^{\infty} I
+      \begin{bmatrix}
+          dx \\
+          0 \\
+          0
+      \end{bmatrix} \times B_0
+      \begin{bmatrix}
+        e^{-\left(\frac{y}{b}\right)^2} \\
+        e^{-\left(\frac{x}{a}\right)^2} \\
+        0
+    \end{bmatrix} \\
+    &= I B_0 \int_{-\infty}^{\infty} e^{-\left(\frac{x}{a}\right)^2}\hat{k}~dx \\
+    &= I B_0 a \sqrt{\pi} \hat{k}
+\end{align*}
+
+\subsubsection*{b)}
+\begin{align*}
+    F &= \int_{-\infty}^{\infty} I
+      \begin{bmatrix}
+          0 \\
+          dy \\
+          0
+      \end{bmatrix} \times B_0
+      \begin{bmatrix}
+        e^{-\left(\frac{y}{b}\right)^2} \\
+        e^{-\left(\frac{x}{a}\right)^2} \\
+        0
+    \end{bmatrix} \\
+    &= I B_0 \int_{-\infty}^{\infty} -e^{-\left(\frac{y}{b}\right)^2}\hat{k}~dy \\
+    &= -I B_0 b \sqrt{\pi} \hat{k}
+\end{align*}
+
+\subsubsection*{c)}
+\begin{align*}
+    F &= \int_{-\infty}^{\infty} I
+      \begin{bmatrix}
+          \cos{(\arctan{m})} dx \\
+          \sin{(\arctan{m})} dy \\
+          0
+      \end{bmatrix} \times B_0
+      \begin{bmatrix}
+        e^{-\left(\frac{y}{b}\right)^2} \\
+        e^{-\left(\frac{x}{a}\right)^2} \\
+        0
+    \end{bmatrix} \\
+    &= I B_0 \int_{-\infty}^{\infty} \left(
+        \frac{1}{\sqrt{1+m^2}} e^{-\left(\frac{x}{a}\right)^2} - \frac{m}{\sqrt{1+m^2}} e^{-\left(\frac{y}{b}\right)^2}
+    \right)\hat{k}~dy  \\
+    &= I B_0 \sqrt{\pi} \left(\frac{a}{\sqrt{1 + m^2}} - \frac{mb}{\sqrt{1 + m^2}} \right) \hat{k}
+\end{align*}
+
+\subsubsection*{d)}
+
+\indent \indent When m = 0
+\begin{equation*}
+    I B_0 \sqrt{\pi} \left(\frac{a}{\sqrt{1 + 0}} - \frac{0 m}{\sqrt{1 + 0}} \right) \hat{k} = I B_0 a \sqrt{\pi} \hat{k}
+\end{equation*}
+
+When m = $\infty$, $\lim_{m \to \infty} \frac{1}{\sqrt{1+m^2}} = 0$, $\lim_{m \to \infty} \frac{m}{\sqrt{1+m^2}} = 1$
+\begin{equation*}
+    I B_0 \sqrt{\pi} \left(\frac{a}{\sqrt{1 + m^2}} - \frac{mb}{\sqrt{1 + m^2}} \right) \hat{k} = -I B_0 b \sqrt{\pi} \hat{k}
+\end{equation*}
+\end{document}
