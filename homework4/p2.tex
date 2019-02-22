@@ -1,0 +1,30 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 4.1}
+\subsubsection*{a)}
+\begin{equation*}
+    R = \rho \frac{d}{A}
+    % 1.6 \frac{1 \times 10^{-2}}{0.2 \times 10^{-2} \times 0.005 \times 10^{-2}} = 1.6 \times 10^5 \Omega
+\end{equation*}
+\begin{equation*}
+    \vec{j} = \frac{I}{A} = -ne \vec{v_d}
+\end{equation*}
+\begin{align*}
+    \vec{v_d} &= -\frac{I}{Ane} = -\frac{V}{RAne} = -\frac{V}{\rho \frac{d}{A} A n e} = -\frac{V}{\rho d n e} \\
+    &= -\frac{3}{-1.6 \times 10^{-2} \times 0.01 \times 2 \times 10^{15} \times 10^6 \times 1.6 \times 10^{-19}} \\
+    &= 58.59\ m / s
+\end{align*}
+\begin{equation*}
+    \vec{E} = -\vec{v_d} \times \vec{B} = -58.59 \times 0.1 T = -5.859 N / C
+\end{equation*}
+\begin{equation*}
+    V = - \int \vec{E} \cdot d \vec{l} = - \int_{0}^{0.002} -5.859 dl = 1.1718 \times 10^{-2}V
+\end{equation*}
+\end{document}

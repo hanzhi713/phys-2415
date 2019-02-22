@@ -57,10 +57,28 @@
         0
     \end{bmatrix} \\
     &= I B_0 \int_{-\infty}^{\infty} \left(
-        \frac{1}{\sqrt{1+m^2}} e^{-\left(\frac{x}{a}\right)^2} - \frac{m}{\sqrt{1+m^2}} e^{-\left(\frac{y}{b}\right)^2}
+        \frac{1}{\sqrt{1+m^2}} e^{-\left(\frac{x}{a}\right)^2} \right)\hat{k}~dx - \int_{-\infty}^{\infty} \left(\frac{m}{\sqrt{1+m^2}} e^{-\left(\frac{y}{b}\right)^2}
     \right)\hat{k}~dy  \\
     &= I B_0 \sqrt{\pi} \left(\frac{a}{\sqrt{1 + m^2}} - \frac{mb}{\sqrt{1 + m^2}} \right) \hat{k}
 \end{align*}
+
+% \begin{align*}
+%     F &= \int_{-\infty}^{\infty} I \frac{1}{\sqrt{1+m^2}}
+%       \begin{bmatrix}
+%           dx \\
+%           m dx \\
+%           0
+%       \end{bmatrix} \times B_0
+%       \begin{bmatrix}
+%         e^{-\left(\frac{mx}{b}\right)^2} \\
+%         e^{-\left(\frac{x}{a}\right)^2} \\
+%         0
+%     \end{bmatrix} \\
+%     &= I B_0 \int_{-\infty}^{\infty} \left(
+%         \frac{1}{\sqrt{1+m^2}} e^{-\left(\frac{x}{a}\right)^2} -  \frac{m}{\sqrt{1+m^2}} e^{-\left(\frac{mx}{b}\right)^2}
+%     \right)\hat{k}~dx  \\
+%     &= I B_0 \sqrt{\pi} \left(\frac{a}{\sqrt{1 + m^2}} - \frac{b}{\sqrt{1 + m^2}} \right) \hat{k}
+% \end{align*}
 
 \subsubsection*{d)}
 
