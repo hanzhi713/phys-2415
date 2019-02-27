@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry, setspace}
+\geometry{a4paper, portrait, margin=1in}
+\usepackage[fleqn]{amsmath}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2419 Lab 05}
+\cfoot{\thepage}
+
+\begin{document}
+\section{Derivation of Capacitance}
+
+We have the potential energy of series and parallel capacitors given as follows.
+\begin{align}
+    U_1 &= \frac{1}{2} (C_1 + C_2) V^2 \\ \label{eq:1}
+    U_2 &= \frac{1}{2} \left( \frac{C_1 C_2}{C_1 + C_2} \right) V^2
+\end{align}
+Using Equation~\ref{eq:1}, we express $C_1$ using known values and $C_2$.
+\begin{equation}
+    \frac{2U_1}{V^2} = C_1 + C_2 \Rightarrow C_1 = \frac{2U_1}{V^2} - C_2 \label{eq:3}
+\end{equation}
+Now we substitute Equation~\ref{eq:3} into Equation~2 to solve for $C_2$.
+\begin{align*}
+    U_2 &= \frac{1}{2} \left(
+        \frac{(\frac{2U_1}{V^2} - C_2)C_2}{\frac{2U_1}{V^2}}
+    \right) V^2 \\
+        &= \frac{\frac{2U_1}{V^2}C_2 - C_2^2}{4U_1}
+\end{align*}
+Rearrange the equation
+\begin{equation*}
+    4U_1U_2 = \frac{2U_1}{V^2}C_2 - C_2^2
+\end{equation*}
+\begin{equation}\label{eq:q}
+    C_2^2 - \frac{2U_1}{V^2}C_2 + 4U_1U_2 = 0 
+\end{equation}
+Equation~\ref{eq:q} is a quadratic equation with $C_2$ being the unknown. Solving it using the root formula:
+\begin{align*}
+    C_2 &= \frac{\frac{2U_1}{V^2} \pm \sqrt{\left(\frac{2U_1}{V^2}\right)^2 - 16 U_1 U_2}}{2} \\
+        &= \frac{U_1}{V^2} \pm \frac{1}{V^2} \sqrt{U_1^2 - 4 U_1 U_2}
+\end{align*}
+Now substitute $C_2$ into Equation~\ref{eq:3} to solve for $C_1$.
+\begin{align*}
+    C_1 &= \frac{2U_1}{V^2} - \left(
+        \frac{U_1}{V^2} \pm \frac{1}{V^2} \sqrt{U_1^2 - 4 U_1 U_2}
+    \right) \\
+        &= \frac{U_1}{V^2} \mp \frac{1}{V^2} \sqrt{U_1^2 - 4 U_1 U_2}
+\end{align*}
+Therefore,
+\def\arraystretch{1.5}
+\begin{equation*}
+    \left\{
+    \begin{array}{ll}
+        C_1 &= \frac{U_1}{V^2} + \frac{1}{V^2} \sqrt{U_1^2 - 4 U_1 U_2} \\
+        C_2 &= \frac{U_1}{V^2} + \frac{1}{V^2} \sqrt{U_1^2 - 4 U_1 U_2}
+    \end{array}
+    \right.
+\end{equation*}
+
+\section{Error Propagation}
+\begin{align*}
+    C_1 = 0.0197702681531304 \pm 0.000327629137653663 \\
+    C_2 = 0.0361213768295607 \pm 0.000327804658695168
+\end{align*}
+\begin{equation*}
+    \sigma_{C_1}, \sigma_{C_2} = \frac{\sqrt{\frac{V^{2} \left(U_{1}^{2} \sigma_{U 1}^{2} + 4 U_{1}^{2} \sigma_{U 2}^{2} + 4 U_{2}^{2} \sigma_{U 1}^{2} + \sigma_{U 1}^{2}\right) + 4 \sigma_{V}^{2} \left(U_{1} - \sqrt{U_{1} \left(U_{1} - 4 U_{2}\right)}\right)^{2}}{V^{2} \left(U_{1} - \sqrt{U_{1} \left(U_{1} - 4 U_{2}\right)}\right)^{2}}} \left(U_{1} - \sqrt{U_{1} \left(U_{1} - 4 U_{2}\right)}\right)}{V^{2}}
+\end{equation*}
+
+\end{document}
