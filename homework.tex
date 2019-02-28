@@ -43,33 +43,51 @@
 
 \newenvironment{subp}{\begin{adjustwidth}{1cm}{}\mbox{}}{\end{adjustwidth}}
 
+% \newenvironment{mleq}
+% {%
+%   \vspace{-0.5cm}%
+%   \begin{align*}%
+% }{
+%   \end{align*}%
+% }
+
+\usepackage{etoolbox}
+\newcommand{\zerodisplayskips}{%
+  \setlength{\abovedisplayskip}{.2cm}%
+  \setlength{\belowdisplayskip}{.2cm}%
+  \setlength{\abovedisplayshortskip}{.2cm}%
+  \setlength{\belowdisplayshortskip}{.2cm}}
+\appto{\normalsize}{\zerodisplayskips}
+\appto{\small}{\zerodisplayskips}
+\appto{\footnotesize}{\zerodisplayskips}
+
 \begin{document}
 % --------- title page -------------
 \begin{titlepage}
-  \begin{center}
-      \vspace*{1cm}
+	\begin{center}
+		\vspace*{1cm}
 
-      \Huge\textbf{Physics 2415 Homework}
+		\Huge\textbf{Physics 2415 Homework}
 
-      % \vspace{0.5cm}
-      % \LARGE ECE 2630
- 
-      \vspace{1.5cm}
+		% \vspace{0.5cm}
+		% \LARGE ECE 2630
 
-      \textbf{Hanzhi Zhou}
+		\vspace{1.5cm}
 
-      \vfill
-      \vspace{0.8cm}
+		\textbf{Hanzhi Zhou}
 
-      \Large
-      School of Engineering and Applied Science\\
-      \vspace{0.2cm}
-      University of Virginia\\
-      \vspace{0.2cm}
-      \today
-      \vspace{1cm}
-  \end{center}
-  \clearpage
+		\vfill
+		\vspace{0.8cm}
+
+		\Large
+		School of Engineering and Applied Science\\
+		\vspace{0.2cm}
+		University of Virginia\\
+		\vspace{0.2cm}
+		\today
+		\vspace{1cm}
+	\end{center}
+	\clearpage
 \end{titlepage}
 % ----------------------------------
 \pagenumbering{arabic}

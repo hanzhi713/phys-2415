@@ -1,0 +1,76 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 5.1}
+\subsubsection*{a)}
+\begin{align*}
+    d\vec{B} &= \frac{\mu_0}{4\pi} \frac{I d\vec{l} \times \hat{r}}{r^2} = \frac{\mu_0}{4\pi}\frac{I d\vec{l} \times \vec{r}}{r^3} \\
+    &= \frac{\mu_0}{4\pi}\frac{I}{\sqrt{R^2 + y^2}^3}
+    \begin{bmatrix}
+        0 \\
+        -dy  \\
+        0
+    \end{bmatrix} \times
+    \begin{bmatrix}
+        -R \\
+        -y  \\
+        0
+    \end{bmatrix} \\
+    &= \frac{\mu_0}{4\pi}\frac{IR}{(R^2 + y^2)^\frac{3}{2}} dy~\hat{k}
+\end{align*}
+\begin{equation*}
+    \vec{B} = \frac{\mu_0}{4\pi}\int_{0}^{\infty} \frac{IR}{(R^2 + y^2)^\frac{3}{2}} dy~\hat{k} = \frac{I\mu_0}{4\pi R}\hat{k}
+\end{equation*}
+
+\subsubsection*{b)}
+\begin{align*}
+    d\vec{B} &= \frac{\mu_0}{4\pi}\frac{I}{\sqrt{R^2}^3}
+    \begin{bmatrix}
+        \cos(\theta + \frac{\pi}{2}) \\
+        \sin(\theta + \frac{\pi}{2})  \\
+        0
+    \end{bmatrix} d\theta \times R
+    \begin{bmatrix}
+        -\cos \theta \\
+        -\sin \theta  \\
+        0
+    \end{bmatrix} \\
+    &= \frac{\mu_0}{4\pi}\frac{I}{R} d\theta~\hat{k}
+\end{align*}
+\begin{equation*}
+    \vec{B} = \frac{\mu_0}{4\pi}\int_{\pi}^{\frac{3}{2}\pi} \frac{I}{R} d\theta~\hat{k} = \frac{\mu_0I}{8\pi R}~\hat{k}
+\end{equation*}
+
+\subsubsection*{c)}
+\begin{align*}
+    d\vec{B} &= \frac{\mu_0}{4\pi}\frac{I}{\sqrt{R^2 + x^2}^3}
+    \begin{bmatrix}
+        dx \\
+        0  \\
+        0
+    \end{bmatrix} \times
+    \begin{bmatrix}
+        -x \\
+        R  \\
+        0
+    \end{bmatrix} \\
+    &= \frac{\mu_0}{4\pi}\frac{IR}{(R^2 + x^2)^\frac{3}{2}} dx~\hat{k}
+\end{align*}
+\begin{equation*}
+    \vec{B} = \frac{\mu_0}{4\pi}\int_{0}^{\infty} \frac{IR}{(R^2 + x^2)^\frac{3}{2}} dx~\hat{k} = \frac{I\mu_0}{4\pi R}\hat{k}
+\end{equation*}
+
+\subsubsection*{d)}
+\begin{equation*}
+    \vec{B}_{\text{total}} = 2\frac{I\mu_0}{4\pi R}\hat{k} + \frac{\mu_0I}{8\pi R}~\hat{k} = \frac{9\mu_0I}{16\pi R}~\hat{k} = 9 \frac{4\pi \times 10^{-7} \times 0.5}{16 \pi \times 2 \times 10^{-2}} = \frac{9}{16} \times 10^{-5}  T \hat{k}
+\end{equation*}
+
+\subsubsection*{e)}\indent\indent
+They are already indicated by unit vectors
+\end{document}
