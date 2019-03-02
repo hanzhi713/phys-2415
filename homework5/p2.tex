@@ -1,0 +1,79 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 5.2}
+\subsubsection*{a)}
+\begin{equation*}
+    \varepsilon = \frac{d\Phi}{dt} = B \frac{dA}{dt}
+    = B L v
+\end{equation*}
+\subsubsection*{b)}
+\begin{equation*}
+    I = \frac{\varepsilon}{R} = \frac{BLv}{R}
+\end{equation*}
+
+\subsubsection*{c)}
+\begin{equation*}
+    F = I d\vec{l} \times \vec{B} = -ILB = -\frac{(BL)^2v}{R}
+\end{equation*}
+
+\subsubsection{d)}
+\begin{equation*}
+    F = ma = m \frac{dv}{dt} = -\frac{(BL)^2v}{R}
+\end{equation*}
+\begin{equation*}
+    \frac{1}{v}\frac{dv}{dt} = -\frac{(BL)^2}{Rm}
+\end{equation*}
+
+\subsubsection*{e)}
+\begin{equation*}
+    \int \frac{1}{v} dv = \int -\frac{(BL)^2}{Rm} dt
+\end{equation*}
+\begin{equation*}
+    \ln|v| = -\frac{(BL)^2}{Rm} t + C
+\end{equation*}
+\begin{equation*}
+    v = Ce^{-\frac{(BL)^2}{Rm}t}
+\end{equation*}
+\begin{equation*}
+    v(0) = C = v_0 \Rightarrow C = v_0
+\end{equation*}
+\begin{equation*}
+    v = v_0 e^{-\frac{(BL)^2}{Rm}t}
+\end{equation*}
+
+\subsubsection*{f)}
+\begin{equation*}
+    d = \int_{0}^{\infty} v_0 e^{-\frac{(BL)^2}{Rm}t} dt = -v_0 \lim_{a \to \infty} \frac{Rm}{(BL)^2} \left[
+        e^{-\frac{(BL)^2}{Rm}t}
+    \right]^a_0 = v_0 \frac{Rm}{(BL)^2}
+\end{equation*}
+
+\subsubsection*{g)}
+\begin{equation*}
+    P(t) = \frac{(BLv)^2}{R} = \frac{(BL)^2}{R} v_0^2
+    \left(
+        e^{-2\frac{(BL)^2}{Rm}t}
+    \right)
+\end{equation*}
+
+\subsubsection*{h)}
+\begin{align*}
+    W &= \int_{0}^{\infty} \frac{(BL)^2}{R} v_0^2
+    \left(
+        e^{-2\frac{(BL)^2}{Rm}t}
+    \right) dt \\
+     &= \frac{(BL)^2}{R} v_0^2 \lim_{a \to \infty}
+     \left(-\frac{Rm}{2(BL)^2}\right)
+     \left[
+        e^{-2\frac{(BL)^2}{Rm}t}
+     \right]^a_0 \\
+     &= \frac{1}{2} m v_0^2
+\end{align*}
+\end{document}
