@@ -1,0 +1,48 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 6.1}
+\subsubsection*{a)}
+\begin{equation*}
+    v = \omega l 
+\end{equation*}
+
+\subsubsection*{b)}
+\begin{equation*}
+    d \varepsilon = B v dl = B \omega l dl
+\end{equation*}
+
+\subsubsection*{c)}
+\begin{equation*}
+    \varepsilon = \int_{0}^{L} B \omega l dl = B \omega \left[ \frac{1}{2} l^2 \right]^{L}_{0} = \frac{1}{2} B \omega L^2
+\end{equation*}
+
+\subsubsection*{d)}
+\begin{equation*}
+    I = \frac{8 \varepsilon}{R} = \frac{4 B \omega L^2}{R}
+\end{equation*}
+
+\subsubsection*{e)}
+\begin{align*}
+    \vec{\tau} &= 8 \int \vec{l} \times (I d\vec{l} \times \vec{B}) = \frac{32 B \omega L^2}{R} \int \vec{l} \times (d\vec{l} \times \vec{B})\\
+    &= \frac{32 B \omega L^2}{R} \int_0^{L} l dl B \hat{k} \\
+    &= \frac{16 B^2 \omega L^4}{R} \hat{k}
+\end{align*}
+
+\subsubsection*{f)}
+\begin{equation*}
+    P_{\text{mech}} = \vec{\tau} \cdot \vec{\omega} = \frac{16 B^2 \omega^2 L^4}{R}
+\end{equation*}
+
+\subsubsection*{g)}
+\begin{equation*}
+    P_{\text{elec}} = I^2 R = \left(\frac{4 B \omega L^2}{R}\right)^2 R = \frac{16 B^2 \omega^2 L^4}{R} = P_{\text{mech}}
+\end{equation*}
+
+\end{document}
