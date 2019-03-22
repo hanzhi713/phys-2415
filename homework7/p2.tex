@@ -1,0 +1,60 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+
+\subsubsection*{a)}
+\begin{equation*}
+    \mathbf{I_1} = \frac{V_0}{\frac{1}{j \omega C}} = V_0 j \omega C
+\end{equation*}
+\begin{equation*}
+    |\mathbf{I_1}| = V_0 \omega C
+\end{equation*}
+\begin{equation*}
+    \phi = \arctan \frac{\omega C}{0} = \frac{\pi}{2} 
+\end{equation*}
+\begin{equation*}
+    I_1(t) = V_0 \omega C \sin{\left(\omega t + \frac{\pi}{2}\right)}
+\end{equation*}
+
+\subsubsection*{b)}
+\begin{equation*}
+    \mathbf{I_2} = \frac{V_0}{R + j \omega L} = V_0 \frac{R - j \omega L}{R^2 + \omega^2 L^2}
+\end{equation*}
+\begin{equation*}
+    I_2 = |\mathbf{I_2}| = \frac{V_0}{R^2 + \omega^2 L^2} \sqrt{R^2 + \omega^2 L^2} = \frac{V_0}{\sqrt{R^2 + \omega^2 L^2}}
+\end{equation*}
+\begin{equation*}
+    \phi = \arctan{\frac{-\omega L}{R}} = -\arctan{\frac{\omega L}{R}}
+\end{equation*}
+\begin{equation*}
+    \cos{\phi} = \frac{1}{\sqrt{1 + \left(\frac{\omega L}{R}\right)^2}} = \frac{R}{\sqrt{R^2 + \omega^2 L^2}}
+\end{equation*}
+\begin{equation*}
+    \sin{\phi} = \frac{\frac{-\omega L}{R}}{\sqrt{1 + \left(\frac{\omega L}{R}\right)^2}} = \frac{-\omega L}{\sqrt{R^2 + \omega^2 L^2}}
+\end{equation*}
+
+\subsubsection*{c)}
+\begin{align*}
+    \mathbf{I_0} = \mathbf{I_1 + I_2} &= V_0 j \omega C + V_0 \frac{R - j \omega L}{R^2 + \omega^2 L^2} \\
+     &= V_0 \frac{j \omega C (R^2 + \omega^2 L^2) + R - j \omega L}{R^2 + \omega^2 L^2} \\
+     &= V_0 \frac{R + j \omega (CR^2 + \omega^2 C L^2 - L)}{R^2 + \omega^2 L^2}
+\end{align*}
+\begin{equation*}
+    |\mathbf{I_0}| = \frac{V_0}{R^2 + \omega^2 L^2} \sqrt{R^2 + \omega^2 (CR^2 + \omega^2 C L^2 - L)^2}
+\end{equation*}
+\begin{equation*}
+    \phi = \arctan \left( \frac{\omega(CR^2 + \omega^2 C L^2 - L)}{R} \right)
+\end{equation*}
+
+\subsubsection*{d)}
+\begin{equation*}
+    \cos{\phi} = \frac{1}{\sqrt{1 + \left( \frac{\omega(CR^2 + \omega^2 C L^2 - L)}{R} \right)^2}} = \frac{R}{\sqrt{R^2 + \omega^2 (CR^2 + \omega^2 C L^2 - L)^2}}
+\end{equation*}
+
+\end{document}
