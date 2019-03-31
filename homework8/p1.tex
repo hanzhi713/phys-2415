@@ -1,0 +1,54 @@
+\documentclass[../homework.tex]{subfiles}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Hanzhi Zhou}
+\lhead{Physics 2415 Homework}
+\cfoot{\thepage}
+
+\begin{document}
+\subsection{Problem 8.1}
+\subsubsection*{a)}
+\begin{equation*}
+    f_B = B \cos \phi \sin(kx - \omega t) + B \sin \phi \cos (kx - \omega t)
+\end{equation*}
+\subsubsection*{b)}
+\begin{equation*}
+    f_A + f_B = (A + B \cos \phi) \sin(kx - \omega t) + B \sin \phi \cos(kx - \omega t)
+\end{equation*}
+\subsubsection*{c)}
+\begin{equation*}
+    D_1^2 + D_2^2 = A^2 + B^2 \cos^2 \phi + 2AB\cos \phi + B^2 \sin^2 \phi = A^2 + 2AB\cos \phi + B^2
+\end{equation*}
+\begin{equation*}
+    \tan \phi = \frac{D_2}{D_1} = \frac{B \sin \phi}{A + B \cos \phi}
+\end{equation*}
+\begin{equation*}
+    f_A + f_B = \sqrt{A^2 + 2AB\cos \phi + B^2} \sin\left(kx - \omega t + \arctan \left( \frac{B \sin \phi}{A + B \cos \phi}\right) \right)
+\end{equation*}
+\subsubsection*{d)}
+\begin{align*}
+    \text{Amplitude} &= \sqrt{A^2 + 2AB\cos \phi + B^2} \\
+    \text{Speed} &= \frac{\omega}{k} \\
+    \text{Phase } \psi &= \arctan \frac{B \sin \phi}{A + B \cos \phi}
+\end{align*}\indent
+The wave form is still sinusoidal
+\begin{align*}
+    \phi = 0 \Rightarrow f_A + f_B &= \sqrt{A^2 + 2AB + B^2} \sin \left(kx - \omega t + \arctan 0 \right)\\
+     &= (A+B) \sin(kx -\omega t) \\
+     &= A\sin(kx -\omega t) + B \sin(kx -\omega t)
+\end{align*}
+
+\subsubsection*{e)}
+\begin{align*}
+    f_- + f_+ &= (A \sin kx \cos \omega t - \cos kx \sin \omega t) + (A \sin kx \cos \omega t + \cos kx \sin \omega t) \\
+    &= 2A \sin kx \cos \omega t
+\end{align*}
+
+\subsubsection*{f)}
+\begin{equation*}
+    \text{Amplitude} = 2A
+\end{equation*}
+
+It is not sinusoidal and it is not a traveling wave.
+\end{document}
