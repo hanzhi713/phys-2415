@@ -22,10 +22,10 @@
 % if using A4 paper. (This probably isn't strictly necessary.)
 % If using another size paper, use default 1cm margins.
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
-    { \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+    { \geometry{top=.75in,left=.75in,right=.75in,bottom=.75in} }
     {\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
-        {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
-        {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+        {\geometry{top=1.5cm,left=1.5cm,right=1.5cm,bottom=1.5cm} }
+        {\geometry{top=1.5cm,left=1.5cm,right=1.5cm,bottom=1.5cm} }
     }
 
 % Turn off header and footer
@@ -79,6 +79,7 @@
 
     \begin{center}
         \Large{\underline{PHYS 2415 Formula Sheet}} \\
+        \large By Hanzhi Zhou
     \end{center}
 
     \section{Electricity}
@@ -167,6 +168,7 @@
     \begin{equation*}
         j = \frac{I}{A} = -n e \vec{\mathbf{v}}_d
     \end{equation*}
+    Number of electrons over volume
     \begin{equation*}
         n = \frac{N}{V}
     \end{equation*}
@@ -198,6 +200,9 @@
     \end{equation*}
     \begin{equation*}
         B_{\text{Solenoid}} = \frac{1}{2} \frac{\mu_0 N I}{l}
+    \end{equation*}
+    \begin{equation*}
+        B_{\text{long wire}} = \frac{\mu_0 I}{2 \pi r}\,\, (\text{from Ampere's law})
     \end{equation*}
     \begin{equation*}
        \mathcal{X}_\mu = \frac{\mu - \mu_0}{\mu_0} \text{ magnetic susceptibility}
@@ -269,7 +274,100 @@
     \begin{equation*}
         P_{\text{refl}} = \frac{2}{Ac} \frac{dU}{dt} = \frac{2 \overbar{S}}{c}
     \end{equation*}
-    % You can even have references
+    \begin{equation*}
+        c = \frac{1}{\mu_0 \epsilon_0}
+    \end{equation*}
+
+    \newpage
+
+    \section{Geometric Optics}
+    \begin{equation*}
+        \frac{1}{f} = \frac{1}{d_i} + \frac{1}{d_o}
+    \end{equation*}
+    \begin{equation*}
+        f = \frac{R}{2}
+    \end{equation*}
+    \begin{equation*}
+        m = -\frac{d_i}{d_o}
+    \end{equation*}
+    Sign convention
+    \begin{enumerate}
+        \item $d_o$ positive if object at side where the light comes from, negative otherwise
+        \item $d_i$ positive if image at the opposite side where the light comes from, negative otherwise.
+        \item $f$ positive for converging lens, negative for diverging lens, infinity for mirror
+    \end{enumerate}
+    Lensmaker's equation. Note: if concave, $R$ is negative.
+    \begin{equation*}
+        \frac{1}{f} = (n - 1) \left(\frac{1}{R_1} + \frac{1}{R_2}\right)
+    \end{equation*}
+    \begin{equation*}
+        n_1 \sin\theta_1 = n_2 \sin \theta_2
+    \end{equation*}
+    \begin{equation*}
+        \sin \theta_c = \frac{n_2}{n_1}
+    \end{equation*}
+    \begin{equation*}
+        n = \frac{c}{\sqrt{\mu \epsilon}}
+    \end{equation*}
+    \begin{equation*}
+        \lambda_n = \frac{v}{f} = \frac{c}{nf} = \frac{\lambda}{n}
+    \end{equation*}
+    where $\lambda_n$ is the wavelength in the material with index of refraction $n$.
+    \begin{equation*}
+        P = \frac{1}{f} \text{ Units: dipoter. $1 D = 1 m^{-1}$}
+    \end{equation*}
+    \section{Diffraction and Interference}
+    \subsection{Single-slit}
+    Position of \textbf{minima}. Note that $D$ is the width of the slit and $m=0$ corresponds to the central maximum.
+    \begin{equation*}
+        D \sin \theta = m \lambda,\,\, m = \pm 1, \pm 2
+    \end{equation*}
+    \begin{equation*}
+        I_{\theta} = I_0 \left[
+            \frac{\sin \left(
+                \frac{\pi D \sin \theta}{\lambda}
+            \right)}{\left(
+                \frac{\pi D \sin \theta}{\lambda}
+            \right)}
+        \right]^2
+    \end{equation*}
+    \subsection{Double-slit}
+    Constructive interference (bright)
+    \begin{equation*}
+        d \sin \theta = m \lambda,\,\, m = 0, \pm 1, \pm 2...
+    \end{equation*}
+    Destructive interference (dark)
+    \begin{equation*}
+        d \sin \theta = \left(m + \frac{1}{2} \right) \lambda,\,\, m = 0, \pm 1, \pm 2...
+    \end{equation*}
+    \begin{equation*}
+        I_\theta = I_0 \cos^2 \left(\frac{\delta}{2}\right)
+    \end{equation*}
+    \begin{equation*}
+        \delta = \frac{2\pi}{\lambda} d \sin \theta
+    \end{equation*}
+    \subsection{Thin-film}
+    If light reflects from the surface where $n_1 < n_2$, there will be $180^\circ$ phase shift ($\frac{1}{2}\lambda$~wavelength).
+
+    Constructive interference
+    \begin{equation*}
+        \frac{2tn}{\lambda_{\text{vacuum}}} = m + \frac{1}{2}
+    \end{equation*}
+    Destructive interference
+    \begin{equation*}
+        \frac{2tn}{\lambda_{\text{vacuum}}} = m
+    \end{equation*}
+    where $t$ is the thickness and $n$ is the index of refraction of the material
+    \subsection{Diffraction grating}
+    Positions of principle \textbf{maxima}. $d$ is the width between slits.
+    \begin{equation*}
+        d \sin \theta = m \lambda
+    \end{equation*}
+    \subsection{Other}
+    Angular resolution (Rayleigh criterion). $D$: diameter.
+    \begin{equation*}
+        \theta = \frac{1.22 D}{\lambda}
+    \end{equation*}
     \rule{0.3\linewidth}{0.25pt}
     \scriptsize
     \bibliographystyle{abstract}
